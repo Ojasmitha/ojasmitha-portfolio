@@ -7,6 +7,13 @@ export default function Portfolio() {
 
   const projects = [
     {
+      title: "AI-Driven Parent Email Automation", category: "Production Pipeline",
+      description: "Automated parent-facing email workflows by building a structured, agent-based pipeline that transforms raw educational content and attachments into validated outbound communication.",
+      tech: ["TypeScript", "React.js", "Node.js", "FastAPI", "Tailwind", "OCR", "RAG Pipelines", "Schema-Constrained Generation"],
+      impact: "Reduced internal release cycles from multiple days to under 24 hours · Supporting 6K+ monthly parent interactions · Increased processing speed by ~5×",
+      highlights: ["AI agent workflow with schema-constrained generation", "Scraped & structured Notion-authored materials into machine-readable formats", "OCR validation for attached images and PDFs before triggering workflows", "Human-in-the-loop review gate for reliability", "Full-stack delivery layer with multimodal validation across 100s of learning-domain PDFs"]
+    },
+    {
       title: "Cursor MCP Integration", category: "MCP Agent",
       description: "Built a Cursor IDE MCP server with SSE-based streaming for real-time code context management and intelligent code completion workflows.",
       tech: ["TypeScript", "Node.js", "SSE Streaming", "MCP Protocol", "Secure Local Hosts"],
@@ -52,26 +59,26 @@ export default function Portfolio() {
 
   const expertise = [
     {
-      icon: <Code2 className="w-8 h-8" />, title: "MCP Protocol",
+      icon: <Zap className="w-8 h-8" />, title: "Workflow Automation",
+      skills: ["AI Agents", "Schema Generation", "OCR Validation", "Human-in-the-Loop", "Pipeline Orchestration"],
+      description: "Building production automation pipelines that eliminate manual workflows and reduce operational cycles from days to hours."
+    },
+    {
+      icon: <Code2 className="w-8 h-8" />, title: "MCP Protocol & Streaming",
       skills: ["SSE Streaming", "HTTP Streaming", "Tool Sandboxing", "PulseMCP"],
       description: "Expert in designing and deploying MCP servers with secure, low-latency streaming for agent-system communication."
     },
     {
-      icon: <Layers className="w-8 h-8" />, title: "Full-Stack AI Apps",
-      skills: ["Next.js", "React", "TypeScript", "FastAPI", "PostgreSQL"],
-      description: "End-to-end application development with planning, evaluation, and execution step frameworks for agentic platforms."
-    },
-    {
-      icon: <Zap className="w-8 h-8" />, title: "Platform Engineering",
-      skills: ["RAG Pipelines", "Agent Orchestration", "Neo4j", "Docker", "Monitoring"],
-      description: "Production-grade AI systems with multi-step reasoning, observability, and real-time performance tracking."
+      icon: <Layers className="w-8 h-8" />, title: "Full-Stack AI Systems",
+      skills: ["Next.js", "React", "TypeScript", "FastAPI", "RAG Pipelines", "Neo4j"],
+      description: "End-to-end AI application development with planning, evaluation, and execution frameworks for production-grade platforms."
     }
   ];
 
   const timeline = [
     {
       date: "01/2025 – Present", role: "AI Engineer", company: "Nurture Holdings Inc · New York, NY",
-      highlights: ["3 MCP agents in production (Cursor, Notion, Unity)", "SSE + HTTP streaming implementations", "RAG pipelines with Neo4j vector indexes", "Published to PulseMCP server"]
+      highlights: ["Automated parent email workflows reducing release cycles from days to <24 hours", "Built AI pipelines supporting 6K+ monthly parent interactions with 5× faster processing", "3 MCP agents in production (Cursor, Notion, Unity) with SSE + HTTP streaming", "Schema-constrained generation with OCR validation and human-in-the-loop review gates", "RAG pipelines with Neo4j vector indexes · Published to PulseMCP server"]
     },
     {
       date: "09/2023 – 12/2024", role: "Data Science Research Assistant", company: "UC Santa Cruz",
@@ -79,7 +86,7 @@ export default function Portfolio() {
     },
     {
       date: "12/2021 – 08/2023", role: "ML Engineer", company: "Accenture · Bengaluru, India",
-      highlights: ["$250K saved via ML deployment", "Computer vision pipelines in ServiceNow", "Real-time monitoring of 5K+ daily predictions"]
+      highlights: ["Built automated ML deployment pipelines saving $250K in operational costs", "Computer vision workflows integrated into ServiceNow for automated processing", "Real-time monitoring dashboards tracking 5K+ daily predictions"]
     }
   ];
 
@@ -90,7 +97,7 @@ export default function Portfolio() {
         <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
           <span className="text-xl font-bold text-cyan-400">Ojasmitha.dev</span>
           <div className="hidden md:flex gap-8 text-sm font-medium text-slate-300">
-            {["projects","expertise","experience","contact"].map(s => (
+            {["systems","expertise","experience","contact"].map(s => (
               <a key={s} href={`#${s}`} className="hover:text-cyan-300 transition capitalize">{s}</a>
             ))}
           </div>
@@ -100,7 +107,7 @@ export default function Portfolio() {
         </div>
         {mobileMenuOpen && (
           <div className="md:hidden bg-slate-900 border-t border-slate-800 px-6 py-4 space-y-3 text-sm">
-            {["projects","expertise","experience","contact"].map(s => (
+            {["systems","expertise","experience","contact"].map(s => (
               <a key={s} href={`#${s}`} onClick={() => setMobileMenuOpen(false)} className="block hover:text-cyan-300 capitalize">{s}</a>
             ))}
           </div>
@@ -110,7 +117,7 @@ export default function Portfolio() {
       {/* Hero */}
       <section className="pt-36 pb-24 px-6 text-center">
         <div className="max-w-3xl mx-auto space-y-6">
-          <p className="text-cyan-400 font-semibold tracking-widest uppercase text-sm">AI Platform Engineer</p>
+          <p className="text-cyan-400 font-semibold tracking-widest uppercase text-sm">Applied AI Engineer</p>
           <h1 className="text-5xl md:text-7xl font-extrabold leading-tight">
             Ojasmitha<br/>
             <span style={{background: "linear-gradient(90deg,#60a5fa,#22d3ee,#34d399)", WebkitBackgroundClip:"text", WebkitTextFillColor:"transparent"}}>
@@ -118,11 +125,11 @@ export default function Portfolio() {
             </span>
           </h1>
           <p className="text-lg text-slate-400 max-w-xl mx-auto">
-            Building end-to-end AI agents and platforms with Model Context Protocol, Next.js, and production-grade streaming infrastructure.
+            Automating workflows and building production AI pipelines that reduce manual work cycles from days to hours · Expert in end-to-end agent systems, MCP protocol, and full-stack infrastructure.
           </p>
           <div className="flex gap-4 justify-center pt-2">
-            <a href="#projects" className="px-7 py-3 rounded-lg font-semibold text-sm" style={{background:"linear-gradient(90deg,#3b82f6,#06b6d4)"}}>
-              View Projects
+            <a href="#systems" className="px-7 py-3 rounded-lg font-semibold text-sm" style={{background:"linear-gradient(90deg,#3b82f6,#06b6d4)"}}>
+              View Systems
             </a>
             <a href="#contact" className="px-7 py-3 rounded-lg font-semibold text-sm border border-cyan-500 hover:bg-cyan-500/10 transition">
               Get In Touch
@@ -131,11 +138,11 @@ export default function Portfolio() {
         </div>
       </section>
 
-      {/* Projects */}
-      <section id="projects" className="py-24 px-6">
+      {/* Systems */}
+      <section id="systems" className="py-24 px-6">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-4">Featured <span className="text-cyan-400">Projects</span></h2>
-          <p className="text-center text-slate-400 mb-14">Click a project to explore details</p>
+          <h2 className="text-4xl font-bold text-center mb-4">Production <span className="text-cyan-400">Systems & Automation</span></h2>
+          <p className="text-center text-slate-400 mb-14">Workflows automated, pipelines built, and manual processes eliminated — click to explore</p>
           <div className="grid md:grid-cols-3 gap-4 mb-10">
             {projects.map((p, i) => (
               <button key={i} onClick={() => setActiveProject(i)}
@@ -229,7 +236,7 @@ export default function Portfolio() {
       <section id="contact" className="py-24 px-6 bg-slate-900/40">
         <div className="max-w-2xl mx-auto text-center space-y-8">
           <h2 className="text-4xl font-bold">Let's Build <span className="text-cyan-400">Together</span></h2>
-          <p className="text-slate-400">Open to AI platform engineering, MCP development, and full-stack AI application roles.</p>
+          <p className="text-slate-400">Open to Applied AI Engineering roles focused on workflow automation, pipeline optimization, and production AI systems.</p>
           <div className="flex gap-4 justify-center flex-wrap">
             <a href="mailto:ojasmithareddy17@gmail.com" className="flex items-center gap-2 px-6 py-3 border border-cyan-500/40 rounded-lg hover:bg-cyan-500/10 transition text-sm font-medium">
               <Mail size={16}/> Email
@@ -245,7 +252,7 @@ export default function Portfolio() {
       </section>
 
       <footer className="border-t border-slate-800 py-6 text-center text-slate-500 text-sm">
-        © 2025 Ojasmitha Pedirappagari · AI Platform Engineer · New York, NY
+        © 2026 Ojasmitha Pedirappagari · Applied AI Engineer · New York, NY
       </footer>
     </div>
   );
