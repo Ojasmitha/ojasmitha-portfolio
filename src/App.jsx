@@ -7,6 +7,13 @@ export default function Portfolio() {
 
   const projects = [
     {
+      title: "RL-Based NPC System for Games", category: "Production RL Architecture",
+      description: "Designed and deployed end-to-end reinforcement learning system for adaptive game NPCs with distributed training infrastructure and production-grade orchestration.",
+      tech: ["Python", "Ray RLlib", "PPO", "SAC", "Multi-Agent RL", "GPU Clusters", "Docker", "Kubernetes", "LLM Fine-tuning"],
+      impact: "Production RL system enabling dynamic NPC behaviors · Distributed training pipeline reducing iteration cycles · Scalable architecture for multi-agent environments",
+      highlights: ["End-to-end RL pipeline with PPO and SAC algorithms for adaptive NPC behaviors", "Distributed training infrastructure using Ray RLlib across GPU clusters", "Multi-agent RL system with coordinated behaviors and reward shaping", "Bridged RL systems with LLM fine-tuning for context-aware decision making", "Production deployment with real-time inference and monitoring dashboards"]
+    },
+    {
       title: "AI-Driven Parent Email Automation", category: "Production Pipeline",
       description: "Automated parent-facing email workflows by building a structured, agent-based pipeline that transforms raw educational content and attachments into validated outbound communication.",
       tech: ["TypeScript", "React.js", "Node.js", "FastAPI", "Tailwind", "OCR", "RAG Pipelines", "Schema-Constrained Generation"],
@@ -59,26 +66,26 @@ export default function Portfolio() {
 
   const expertise = [
     {
-      icon: <Zap className="w-8 h-8" />, title: "Workflow Automation",
-      skills: ["AI Agents", "Schema Generation", "OCR Validation", "Human-in-the-Loop", "Pipeline Orchestration"],
+      icon: <Zap className="w-8 h-8" />, title: "Production RL Architecture",
+      skills: ["Ray RLlib", "PPO", "SAC", "Multi-Agent RL", "GPU Clusters", "Distributed Training"],
+      description: "Designing and deploying end-to-end reinforcement learning systems with distributed training infrastructure for production environments."
+    },
+    {
+      icon: <Code2 className="w-8 h-8" />, title: "Workflow Automation & AI Agents",
+      skills: ["AI Agents", "Schema Generation", "MCP Protocol", "RAG Pipelines", "Human-in-the-Loop"],
       description: "Building production automation pipelines that eliminate manual workflows and reduce operational cycles from days to hours."
     },
     {
-      icon: <Code2 className="w-8 h-8" />, title: "MCP Protocol & Streaming",
-      skills: ["SSE Streaming", "HTTP Streaming", "Tool Sandboxing", "PulseMCP"],
-      description: "Expert in designing and deploying MCP servers with secure, low-latency streaming for agent-system communication."
-    },
-    {
-      icon: <Layers className="w-8 h-8" />, title: "Full-Stack AI Systems",
-      skills: ["Next.js", "React", "TypeScript", "FastAPI", "RAG Pipelines", "Neo4j"],
-      description: "End-to-end AI application development with planning, evaluation, and execution frameworks for production-grade platforms."
+      icon: <Layers className="w-8 h-8" />, title: "Full-Stack AI Infrastructure",
+      skills: ["Next.js", "React", "TypeScript", "FastAPI", "Neo4j", "Docker", "Kubernetes"],
+      description: "End-to-end AI system development with distributed training, real-time inference, and monitoring for production-grade platforms."
     }
   ];
 
   const timeline = [
     {
       date: "01/2025 – Present", role: "AI Engineer", company: "Nurture Holdings Inc · New York, NY",
-      highlights: ["Automated parent email workflows reducing release cycles from days to <24 hours", "Built AI pipelines supporting 6K+ monthly parent interactions with 5× faster processing", "3 MCP agents in production (Cursor, Notion, Unity) with SSE + HTTP streaming", "Schema-constrained generation with OCR validation and human-in-the-loop review gates", "RAG pipelines with Neo4j vector indexes · Published to PulseMCP server"]
+      highlights: ["Designed end-to-end RL system for game NPCs with distributed training on Ray RLlib and GPU clusters", "Deployed multi-agent RL architecture using PPO and SAC for adaptive NPC behaviors in production", "Automated parent email workflows reducing release cycles from days to <24 hours", "Built AI pipelines supporting 6K+ monthly parent interactions with 5× faster processing", "3 MCP agents in production (Cursor, Notion, Unity) with SSE + HTTP streaming", "Schema-constrained generation with OCR validation and human-in-the-loop review gates"]
     },
     {
       date: "09/2023 – 12/2024", role: "Data Science Research Assistant", company: "UC Santa Cruz",
@@ -125,7 +132,7 @@ export default function Portfolio() {
             </span>
           </h1>
           <p className="text-lg text-slate-400 max-w-xl mx-auto">
-            Automating workflows and building production AI pipelines that reduce manual work cycles from days to hours · Expert in end-to-end agent systems, MCP protocol, and full-stack infrastructure.
+            Building production RL systems and AI pipelines that automate workflows and reduce cycles from days to hours · Expert in distributed training, multi-agent RL, end-to-end agent systems, and full-stack infrastructure.
           </p>
           <div className="flex gap-4 justify-center pt-2">
             <a href="#systems" className="px-7 py-3 rounded-lg font-semibold text-sm" style={{background:"linear-gradient(90deg,#3b82f6,#06b6d4)"}}>
@@ -236,7 +243,7 @@ export default function Portfolio() {
       <section id="contact" className="py-24 px-6 bg-slate-900/40">
         <div className="max-w-2xl mx-auto text-center space-y-8">
           <h2 className="text-4xl font-bold">Let's Build <span className="text-cyan-400">Together</span></h2>
-          <p className="text-slate-400">Open to Applied AI Engineering roles focused on workflow automation, pipeline optimization, and production AI systems.</p>
+          <p className="text-slate-400">Open to Applied AI Engineering roles focused on production RL architecture, distributed training infrastructure, workflow automation, and scalable AI systems.</p>
           <div className="flex gap-4 justify-center flex-wrap">
             <a href="mailto:ojasmithareddy17@gmail.com" className="flex items-center gap-2 px-6 py-3 border border-cyan-500/40 rounded-lg hover:bg-cyan-500/10 transition text-sm font-medium">
               <Mail size={16}/> Email
