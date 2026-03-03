@@ -139,7 +139,7 @@ export default function Portfolio() {
       {/* Hero */}
       <section className="pt-36 pb-24 px-6 text-center">
         <div className="max-w-3xl mx-auto space-y-6">
-          <p className="text-cyan-400 font-semibold tracking-widest uppercase text-sm">Applied AI Engineer</p>
+          <p className="text-cyan-400 font-semibold tracking-widest uppercase text-sm">AI Engineer</p>
           <h1 className="text-5xl md:text-7xl font-extrabold leading-tight">
             Ojasmitha<br/>
             <span style={{background: "linear-gradient(90deg,#60a5fa,#22d3ee,#34d399)", WebkitBackgroundClip:"text", WebkitTextFillColor:"transparent"}}>
@@ -265,7 +265,7 @@ export default function Portfolio() {
       <section id="contact" className="py-24 px-6 bg-slate-900/40">
         <div className="max-w-2xl mx-auto text-center space-y-8">
           <h2 className="text-4xl font-bold">Let's Build <span className="text-cyan-400">Together</span></h2>
-          <p className="text-slate-400">Open to Applied AI Engineering roles focused on multimodal AI systems, voice intelligence, production RL architecture, and scalable automation pipelines.</p>
+          <p className="text-slate-400">Open to AI Engineering roles focused on multimodal AI systems, voice intelligence, production RL architecture, and scalable automation pipelines.</p>
           <div className="flex gap-4 justify-center flex-wrap">
             <a href="mailto:ojasmithareddy17@gmail.com" className="flex items-center gap-2 px-6 py-3 border border-cyan-500/40 rounded-lg hover:bg-cyan-500/10 transition text-sm font-medium">
               <Mail size={16}/> Email
@@ -281,7 +281,7 @@ export default function Portfolio() {
       </section>
 
       <footer className="border-t border-slate-800 py-6 text-center text-slate-500 text-sm">
-        © 2026 Ojasmitha Pedirappagari · Applied AI Engineer · New York, NY
+        © 2026 Ojasmitha Pedirappagari · AI Engineer · New York, NY
       </footer>
     </div>
   );
