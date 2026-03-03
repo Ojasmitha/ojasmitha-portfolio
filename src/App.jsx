@@ -14,6 +14,14 @@ export default function Portfolio() {
       highlights: ["End-to-end RL pipeline with PPO and SAC algorithms for adaptive NPC behaviors", "Distributed training infrastructure using Ray RLlib across GPU clusters", "Multi-agent RL system with coordinated behaviors and reward shaping", "Bridged RL systems with LLM fine-tuning for context-aware decision making", "Production deployment with real-time inference and monitoring dashboards"]
     },
     {
+      title: "Personalized Graph-Based Retrieval System", category: "Research → Production",
+      description: "Built graph-based retrieval augmentation system solving cold-start personalization for LLMs using user-centric knowledge graphs. Published at PACLIC 2025 with 22+ citations.",
+      tech: ["Python", "Neo4j", "Knowledge Graphs", "RAG Pipelines", "LLMs", "Graph Neural Networks", "Vector Search", "PyTorch"],
+      impact: "Outperformed state-of-the-art personalization methods in cold-start scenarios · 22+ citations · Production graph-based RAG system processing 80K+ annotated documents",
+      highlights: ["Designed PGraphRAG framework leveraging user-centric knowledge graphs for cold-start personalization", "Built graph-based retrieval system integrating structured user knowledge into LLM prompts", "Created benchmark dataset for personalized text generation with sparse user history", "Deployed production RAG pipeline with Neo4j vector indexes over Amazon review graphs", "Published: 'Personalized Graph-based Retrieval for Large Language Models' (PACLIC 2025)"],
+      images: ["/pgraphrag-coldstart-graph.png", "/pgraphrag-architecture.png"]
+    },
+    {
       title: "AI-Driven Parent Email Automation", category: "Production Pipeline",
       description: "Automated parent-facing email workflows by building a structured, agent-based pipeline that transforms raw educational content and attachments into validated outbound communication.",
       tech: ["TypeScript", "React.js", "Node.js", "FastAPI", "Tailwind", "OCR", "RAG Pipelines", "Schema-Constrained Generation"],
@@ -164,6 +172,13 @@ export default function Portfolio() {
             <span className="text-xs font-bold text-cyan-400 uppercase tracking-widest">{projects[activeProject].category}</span>
             <h3 className="text-2xl font-bold mt-2 mb-3">{projects[activeProject].title}</h3>
             <p className="text-slate-300 mb-8">{projects[activeProject].description}</p>
+            {projects[activeProject].images && (
+              <div className="mb-8 grid md:grid-cols-2 gap-4">
+                {projects[activeProject].images.map((img, i) => (
+                  <img key={i} src={img} alt={`${projects[activeProject].title} visualization ${i+1}`} className="rounded-lg border border-slate-700 w-full hover:border-cyan-500/50 transition"/>
+                ))}
+              </div>
+            )}
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <h4 className="font-semibold text-cyan-300 mb-3 text-sm uppercase tracking-wider">Highlights</h4>
