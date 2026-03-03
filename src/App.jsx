@@ -7,6 +7,13 @@ export default function Portfolio() {
 
   const projects = [
     {
+      title: "Multimodal AI Gaming Pipeline", category: "Production Multimodal System",
+      description: "Built deterministic multimodal orchestration pipelines integrating voice, image, and video generation into production gaming experiences supporting 6K+ live sessions with 88% weekly active usage.",
+      tech: ["Python", "ElevenLabs", "Flux", "NanoBanana 2", "Veo 3.1", "LangChain", "n8n", "LLM APIs", "Fine-tuning", "FastAPI"],
+      impact: "Supporting 6K+ live sessions with 88% weekly active usage · Improved audio consistency and user immersion through voice fine-tuning · Built deterministic routing with model swapping capabilities",
+      highlights: ["Fine-tuned voice generation models using ElevenLabs APIs with domain-specific datasets, reducing speech artifacts and increasing immersion", "Integrated image generation pipelines with Flux and NanoBanana 2 for character consistency and sub-pixel text rendering", "Orchestrated video generation workflows using Veo 3.1 for context-aware visual storytelling in gameplay", "Designed low-latency conversational AI agents with deterministic routing and fallback logic for reliable guidance", "Built evaluation frameworks combining play depth, response reliability, and user feedback to reduce behavioral inconsistencies", "Architected flexible pipelines enabling model swapping and fine-tuning based on gameplay requirements"]
+    },
+    {
       title: "RL-Based NPC System for Games", category: "Production RL Architecture",
       description: "Designed and deployed end-to-end reinforcement learning system for adaptive game NPCs with distributed training infrastructure and production-grade orchestration.",
       tech: ["Python", "Ray RLlib", "PPO", "SAC", "Multi-Agent RL", "GPU Clusters", "Docker", "Kubernetes", "LLM Fine-tuning"],
@@ -74,26 +81,26 @@ export default function Portfolio() {
 
   const expertise = [
     {
-      icon: <Zap className="w-8 h-8" />, title: "Production RL Architecture",
-      skills: ["Ray RLlib", "PPO", "SAC", "Multi-Agent RL", "GPU Clusters", "Distributed Training"],
-      description: "Designing and deploying end-to-end reinforcement learning systems with distributed training infrastructure for production environments."
+      icon: <Zap className="w-8 h-8" />, title: "Multimodal AI Systems",
+      skills: ["Voice Fine-tuning", "Image Generation", "Video Generation", "ElevenLabs", "Flux", "Veo 3.1", "LangChain"],
+      description: "Building production multimodal pipelines that orchestrate voice, image, and video generation into cohesive interactive experiences with deterministic routing and model swapping."
     },
     {
-      icon: <Code2 className="w-8 h-8" />, title: "Workflow Automation & AI Agents",
-      skills: ["AI Agents", "Schema Generation", "MCP Protocol", "RAG Pipelines", "Human-in-the-Loop"],
-      description: "Building production automation pipelines that eliminate manual workflows and reduce operational cycles from days to hours."
+      icon: <Code2 className="w-8 h-8" />, title: "Production RL & Agent Systems",
+      skills: ["Ray RLlib", "PPO", "SAC", "Multi-Agent RL", "Conversational AI", "RAG Pipelines"],
+      description: "Designing end-to-end reinforcement learning systems and AI agents with distributed training infrastructure, low-latency routing, and evaluation frameworks."
     },
     {
-      icon: <Layers className="w-8 h-8" />, title: "Full-Stack AI Infrastructure",
-      skills: ["Next.js", "React", "TypeScript", "FastAPI", "Neo4j", "Docker", "Kubernetes"],
-      description: "End-to-end AI system development with distributed training, real-time inference, and monitoring for production-grade platforms."
+      icon: <Layers className="w-8 h-8" />, title: "Workflow Automation & Infrastructure",
+      skills: ["Next.js", "React", "TypeScript", "FastAPI", "Neo4j", "Docker", "Kubernetes", "n8n"],
+      description: "Building automation pipelines and full-stack AI infrastructure that eliminate manual workflows and reduce operational cycles from days to hours."
     }
   ];
 
   const timeline = [
     {
       date: "01/2025 – Present", role: "AI Engineer", company: "Nurture Holdings Inc · New York, NY",
-      highlights: ["Designed end-to-end RL system for game NPCs with distributed training on Ray RLlib and GPU clusters", "Deployed multi-agent RL architecture using PPO and SAC for adaptive NPC behaviors in production", "Automated parent email workflows reducing release cycles from days to <24 hours", "Built AI pipelines supporting 6K+ monthly parent interactions with 5× faster processing", "3 MCP agents in production (Cursor, Notion, Unity) with SSE + HTTP streaming", "Schema-constrained generation with OCR validation and human-in-the-loop review gates"]
+      highlights: ["Integrated voice, image, and video pipelines into production gaming platform supporting 6K+ live sessions with 88% weekly active usage", "Fine-tuned voice generation models using ElevenLabs APIs with domain-specific datasets, reducing speech artifacts", "Designed low-latency conversational AI agents with deterministic routing and fallback logic for reliable gameplay guidance", "Orchestrated multimodal pipelines using LangChain and n8n with Flux diffusion models for image generation and Veo 3.1 for video", "Built evaluation frameworks combining play depth, response reliability, and user feedback to reduce behavioral inconsistencies", "Automated parent-facing workflows reducing release cycles from days to <24 hours", "Designed end-to-end RL system for game NPCs with distributed training on Ray RLlib and GPU clusters"]
     },
     {
       date: "09/2023 – 12/2024", role: "Data Science Research Assistant", company: "UC Santa Cruz",
@@ -140,7 +147,7 @@ export default function Portfolio() {
             </span>
           </h1>
           <p className="text-lg text-slate-400 max-w-xl mx-auto">
-            Building production RL systems and AI pipelines that automate workflows and reduce cycles from days to hours · Expert in distributed training, multi-agent RL, end-to-end agent systems, and full-stack infrastructure.
+            Building production multimodal AI systems orchestrating voice, image, and video generation into interactive experiences · Expert in fine-tuning foundation models, distributed training, conversational AI, and automation pipelines that reduce cycles from days to hours.
           </p>
           <div className="flex gap-4 justify-center pt-2">
             <a href="#systems" className="px-7 py-3 rounded-lg font-semibold text-sm" style={{background:"linear-gradient(90deg,#3b82f6,#06b6d4)"}}>
@@ -258,7 +265,7 @@ export default function Portfolio() {
       <section id="contact" className="py-24 px-6 bg-slate-900/40">
         <div className="max-w-2xl mx-auto text-center space-y-8">
           <h2 className="text-4xl font-bold">Let's Build <span className="text-cyan-400">Together</span></h2>
-          <p className="text-slate-400">Open to Applied AI Engineering roles focused on production RL architecture, distributed training infrastructure, workflow automation, and scalable AI systems.</p>
+          <p className="text-slate-400">Open to Applied AI Engineering roles focused on multimodal AI systems, voice intelligence, production RL architecture, and scalable automation pipelines.</p>
           <div className="flex gap-4 justify-center flex-wrap">
             <a href="mailto:ojasmithareddy17@gmail.com" className="flex items-center gap-2 px-6 py-3 border border-cyan-500/40 rounded-lg hover:bg-cyan-500/10 transition text-sm font-medium">
               <Mail size={16}/> Email
