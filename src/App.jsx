@@ -30,10 +30,10 @@ export default function Portfolio() {
     },
     {
       title: "AI-Driven Parent Email Automation", category: "Production Pipeline",
-      description: "Automated parent-facing email workflows by building a structured, agent-based pipeline that transforms raw educational content and attachments into validated outbound communication.",
-      tech: ["TypeScript", "React.js", "Node.js", "FastAPI", "Tailwind", "OCR", "RAG Pipelines", "Schema-Constrained Generation"],
+      description: "Automated parent-facing email workflows by building a structured, agent-based pipeline that transforms raw educational content and attachments into validated outbound communication with prompt-engineered schema constraints.",
+      tech: ["TypeScript", "React.js", "Node.js", "FastAPI", "Tailwind", "OCR", "RAG Pipelines", "Schema-Constrained Generation", "Prompt Engineering"],
       impact: "Reduced internal release cycles from multiple days to under 24 hours · Supporting 6K+ monthly parent interactions · Increased processing speed by ~5×",
-      highlights: ["AI agent workflow with schema-constrained generation", "Scraped & structured Notion-authored materials into machine-readable formats", "OCR validation for attached images and PDFs before triggering workflows", "Human-in-the-loop review gate for reliability", "Full-stack delivery layer with multimodal validation across 100s of learning-domain PDFs"]
+      highlights: ["Engineered schema-constrained prompts with strict output validation: 'Celebration Title' (must start with 'This week, your child...'), varied practice verbs (7 rotation options), tone constraints (warm, clear, no emojis)", "Built JSON output schemas enforcing structure: title format, message length (2-3 sentences), tense rules (past for events, present for takeaways)", "Designed prompt decomposition: extract adventure events → identify primary skill → select unused verb from rotation → generate title → craft message with direct event references", "Scraped & structured Notion-authored materials into machine-readable formats with validation layers", "Integrated OCR to validate attached images and PDFs before triggering outbound workflows", "Human-in-the-loop review gate with confidence scoring for reliability before dispatch"]
     },
     {
       title: "Cursor MCP Integration", category: "MCP Agent",
@@ -82,8 +82,8 @@ export default function Portfolio() {
   const expertise = [
     {
       icon: <Zap className="w-8 h-8" />, title: "Multimodal AI Systems",
-      skills: ["Voice Fine-tuning", "Image Generation", "Video Generation", "ElevenLabs", "Flux", "Veo 3.1", "LangChain"],
-      description: "Building production multimodal pipelines that orchestrate voice, image, and video generation into cohesive interactive experiences with deterministic routing and model swapping."
+      skills: ["Prompt Engineering", "Voice Fine-tuning", "Image Generation", "Video Generation", "ElevenLabs", "Flux", "Veo 3.1", "LangChain"],
+      description: "Building production multimodal pipelines with prompt-engineered workflows that orchestrate voice, image, and video generation into cohesive interactive experiences with deterministic routing and model swapping."
     },
     {
       icon: <Code2 className="w-8 h-8" />, title: "Production RL & Agent Systems",
@@ -92,14 +92,14 @@ export default function Portfolio() {
     },
     {
       icon: <Layers className="w-8 h-8" />, title: "Workflow Automation & Infrastructure",
-      skills: ["Next.js", "React", "TypeScript", "FastAPI", "Neo4j", "Docker", "Kubernetes", "n8n"],
-      description: "Building automation pipelines and full-stack AI infrastructure that eliminate manual workflows and reduce operational cycles from days to hours."
+      skills: ["Prompt Engineering", "Schema-Constrained Generation", "Next.js", "React", "FastAPI", "Neo4j", "n8n"],
+      description: "Building prompt-engineered automation pipelines with structured validation that eliminate manual workflows and reduce operational cycles from days to hours."
     }
   ];
 
   const timeline = [
     {
-      date: "01/2025 – Present", role: "AI Engineer", company: "Nurture Holdings Inc · New York, NY",
+      date: "01/2025 – Present", role: "AI Engineer", company: "Nurture · New York, NY",
       highlights: ["Integrated voice, image, and video pipelines into production gaming platform supporting 6K+ live sessions with 88% weekly active usage", "Fine-tuned voice generation models using ElevenLabs APIs with domain-specific datasets, reducing speech artifacts", "Designed low-latency conversational AI agents with deterministic routing and fallback logic for reliable gameplay guidance", "Orchestrated multimodal pipelines using LangChain and n8n with Flux diffusion models for image generation and Veo 3.1 for video", "Built evaluation frameworks combining play depth, response reliability, and user feedback to reduce behavioral inconsistencies", "Automated parent-facing workflows reducing release cycles from days to <24 hours", "Designed end-to-end RL system for game NPCs with distributed training on Ray RLlib and GPU clusters"]
     },
     {
@@ -122,6 +122,7 @@ export default function Portfolio() {
             {["systems","expertise","experience","contact"].map(s => (
               <a key={s} href={`#${s}`} className="hover:text-cyan-300 transition capitalize">{s}</a>
             ))}
+            <a href="/prompt-engineering.html" className="hover:text-cyan-300 transition font-semibold text-cyan-400">Prompt Engineering</a>
           </div>
           <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="md:hidden text-cyan-400">
             {mobileMenuOpen ? <X size={22}/> : <Menu size={22}/>}
@@ -132,6 +133,7 @@ export default function Portfolio() {
             {["systems","expertise","experience","contact"].map(s => (
               <a key={s} href={`#${s}`} onClick={() => setMobileMenuOpen(false)} className="block hover:text-cyan-300 capitalize">{s}</a>
             ))}
+            <a href="/prompt-engineering.html" onClick={() => setMobileMenuOpen(false)} className="block hover:text-cyan-300 font-semibold text-cyan-400">Prompt Engineering</a>
           </div>
         )}
       </nav>
@@ -149,11 +151,14 @@ export default function Portfolio() {
           <p className="text-lg text-slate-400 max-w-xl mx-auto">
             Building production multimodal AI systems orchestrating voice, image, and video generation into interactive experiences · Expert in fine-tuning foundation models, distributed training, conversational AI, and automation pipelines that reduce cycles from days to hours.
           </p>
-          <div className="flex gap-4 justify-center pt-2">
+          <div className="flex gap-4 justify-center pt-2 flex-wrap">
             <a href="#systems" className="px-7 py-3 rounded-lg font-semibold text-sm" style={{background:"linear-gradient(90deg,#3b82f6,#06b6d4)"}}>
               View Systems
             </a>
-            <a href="#contact" className="px-7 py-3 rounded-lg font-semibold text-sm border border-cyan-500 hover:bg-cyan-500/10 transition">
+            <a href="/prompt-engineering.html" className="px-7 py-3 rounded-lg font-semibold text-sm border border-cyan-500 hover:bg-cyan-500/10 transition">
+              Prompt Engineering Portfolio
+            </a>
+            <a href="#contact" className="px-7 py-3 rounded-lg font-semibold text-sm border border-slate-600 hover:bg-slate-800/50 transition">
               Get In Touch
             </a>
           </div>
