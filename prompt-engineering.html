@@ -1,0 +1,617 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prompt Engineering Portfolio - Ojasmitha Pedirappagari</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { font-family: 'Inter', system-ui, sans-serif; }
+    .gradient-text { background: linear-gradient(90deg,#60a5fa,#22d3ee,#34d399); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+  </style>
+</head>
+<body class="bg-slate-950 text-white">
+  
+  <!-- Header -->
+  <header class="border-b border-slate-800 py-6 px-6">
+    <div class="max-w-6xl mx-auto flex justify-between items-center">
+      <div>
+        <h1 class="text-2xl font-bold">Prompt Engineering Portfolio</h1>
+        <p class="text-slate-400 text-sm mt-1">Ojasmitha Pedirappagari · AI Engineer</p>
+      </div>
+      <a href="/" class="text-cyan-400 hover:text-cyan-300 text-sm font-medium">← Back to Portfolio</a>
+    </div>
+  </header>
+
+  <!-- Summary -->
+  <section class="py-16 px-6">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-4xl font-bold mb-6">Systematic Prompt Engineering at <span class="gradient-text">Production Scale</span></h2>
+      <p class="text-lg text-slate-300 leading-relaxed">
+        I build production LLM systems that require rigorous prompt engineering: context-aware retrieval, structured output generation, and quality validation at scale. My work spans millions of user records, multimodal pipelines, and deterministic AI behaviors—not casual ChatGPT use, but systematic testing, iteration, and deployment.
+      </p>
+    </div>
+  </section>
+
+  <!-- Project 1: Knowledge Graph Personalization -->
+  <section class="py-12 px-6 bg-slate-900/40">
+    <div class="max-w-4xl mx-auto">
+      <div class="mb-6">
+        <span class="text-xs font-bold text-cyan-400 uppercase tracking-widest">Complex Project #1</span>
+        <h3 class="text-3xl font-bold mt-2 mb-4">Knowledge Graph-Based Personalized Retrieval</h3>
+        <p class="text-slate-400 text-sm mb-6">Dynamically generating context-aware prompts from user knowledge graphs across millions of records</p>
+      </div>
+
+      <div class="space-y-6">
+        <div class="bg-slate-800/50 rounded-lg p-6 border border-slate-700">
+          <h4 class="font-semibold text-cyan-300 mb-3">The Challenge</h4>
+          <p class="text-slate-300 text-sm leading-relaxed">
+            Generic prompts fail to leverage individual user context—preferences, interaction history, and behavioral patterns. I needed to build a system that dynamically generates personalized prompts at scale without sacrificing latency.
+          </p>
+        </div>
+
+        <div class="bg-slate-800/50 rounded-lg p-6 border border-slate-700">
+          <h4 class="font-semibold text-cyan-300 mb-3">Prompt Engineering Approach</h4>
+          <ul class="space-y-3 text-slate-300 text-sm">
+            <li class="flex gap-3">
+              <span class="text-cyan-400 flex-shrink-0">▸</span>
+              <div>
+                <strong class="text-white">Knowledge Graph Construction:</strong> Extracted entities, relationships, and learning patterns from millions of user records to build individual knowledge graphs for each user
+              </div>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-cyan-400 flex-shrink-0">▸</span>
+              <div>
+                <strong class="text-white">Dynamic Context Injection:</strong> Engineered prompts that dynamically incorporate user graph features—expertise level, topic preferences, interaction patterns—to tailor retrieval results
+              </div>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-cyan-400 flex-shrink-0">▸</span>
+              <div>
+                <strong class="text-white">Template Architecture:</strong> Built modular prompt templates with variable context injection points, allowing personalization without rewriting entire prompts
+              </div>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-cyan-400 flex-shrink-0">▸</span>
+              <div>
+                <strong class="text-white">Balancing Context vs. Latency:</strong> Optimized graph traversal and context selection to include maximum relevant information while keeping prompt token count under 2000 for sub-500ms generation
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-slate-800/50 rounded-lg p-6 border border-slate-700">
+          <h4 class="font-semibold text-cyan-300 mb-3">Systematic Iteration Process</h4>
+          <div class="grid md:grid-cols-2 gap-4 text-sm text-slate-300">
+            <div>
+              <p class="font-semibold text-white mb-2">Testing Methodology:</p>
+              <ul class="space-y-1 ml-4">
+                <li>• Built evaluation dataset of 1000+ user queries</li>
+                <li>• Measured retrieval relevance with human annotations</li>
+                <li>• A/B tested prompt variants across user cohorts</li>
+                <li>• Tracked personalization impact on engagement</li>
+              </ul>
+            </div>
+            <div>
+              <p class="font-semibold text-white mb-2">Quality Metrics:</p>
+              <ul class="space-y-1 ml-4">
+                <li>• Semantic similarity to expected results</li>
+                <li>• User satisfaction scores (implicit/explicit)</li>
+                <li>• Refinement rates (users rephrasing queries)</li>
+                <li>• Cold-start performance improvements</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-slate-800/50 rounded-lg p-6 border border-slate-700">
+          <h4 class="font-semibold text-cyan-300 mb-3">Outcomes & Impact</h4>
+          <div class="space-y-2 text-slate-300 text-sm">
+            <p>✓ <strong class="text-white">Improved retrieval relevance</strong> by tailoring responses to individual user contexts vs. generic prompts</p>
+            <p>✓ <strong class="text-white">Reduced query refinement rates</strong> by understanding user intent from historical patterns</p>
+            <p>✓ <strong class="text-white">Research contribution:</strong> Published framework (PGraphRAG) at PACLIC 2025 with 22+ citations</p>
+            <p>✓ <strong class="text-white">Production deployment</strong> processing knowledge graphs over 80K+ annotated documents</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project 2: Multimodal JSON Pipeline -->
+  <section class="py-12 px-6">
+    <div class="max-w-4xl mx-auto">
+      <div class="mb-6">
+        <span class="text-xs font-bold text-cyan-400 uppercase tracking-widest">Complex Project #2 · Current Work at Nacho</span>
+        <h3 class="text-3xl font-bold mt-2 mb-4">Deterministic Multimodal Pipeline with Structured Output</h3>
+        <p class="text-slate-400 text-sm mb-6">Achieving reliable JSON generation from multimodal inputs for spatial reasoning and interactive gaming</p>
+      </div>
+
+      <div class="space-y-6">
+        <div class="bg-slate-800/50 rounded-lg p-6 border border-slate-700">
+          <h4 class="font-semibold text-cyan-300 mb-3">The Challenge</h4>
+          <p class="text-slate-300 text-sm leading-relaxed mb-4">
+            Converting natural language user intent (e.g., "move this object to the left") combined with visual context into structured JSON actions that game systems can execute reliably. The core challenge: <strong class="text-white">achieving deterministic behavior from non-deterministic LLMs</strong>.
+          </p>
+          <div class="bg-slate-900/70 rounded p-4 font-mono text-xs text-slate-300">
+            <p class="text-cyan-400 mb-2">Example Input:</p>
+            <p>"Move the character to the left corner near the tree"</p>
+            <p class="text-cyan-400 mt-3 mb-2">Required Output (JSON):</p>
+            <p class="text-green-400">{ "action": "move", "direction": "left", "target": "tree", "distance": 2.5 }</p>
+          </div>
+        </div>
+
+        <div class="bg-slate-800/50 rounded-lg p-6 border border-slate-700">
+          <h4 class="font-semibold text-cyan-300 mb-3">Prompt Engineering Techniques</h4>
+          <ul class="space-y-3 text-slate-300 text-sm">
+            <li class="flex gap-3">
+              <span class="text-cyan-400 flex-shrink-0">▸</span>
+              <div>
+                <strong class="text-white">Schema-Constrained Prompts:</strong> Designed prompts with explicit JSON schema definitions, valid action primitives, and constraint boundaries (e.g., direction must be: left, right, forward, back)
+              </div>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-cyan-400 flex-shrink-0">▸</span>
+              <div>
+                <strong class="text-white">Few-Shot Examples:</strong> Included 5-10 example input→output pairs in prompts, covering edge cases (ambiguous directions, multiple objects, relative positioning)
+              </div>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-cyan-400 flex-shrink-0">▸</span>
+              <div>
+                <strong class="text-white">Multimodal Context Integration:</strong> Engineered prompts that process both text instructions AND visual scene context (object positions, spatial relationships) to generate spatially-aware actions
+              </div>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-cyan-400 flex-shrink-0">▸</span>
+              <div>
+                <strong class="text-white">Iterative Refinement Loops:</strong> Built validation layers that catch invalid outputs and re-prompt with error context (e.g., "Invalid direction 'leftward' - must be one of: left, right, forward, back")
+              </div>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-cyan-400 flex-shrink-0">▸</span>
+              <div>
+                <strong class="text-white">Task Decomposition:</strong> Split complex commands into sub-tasks (intent classification → entity extraction → action generation → validation) rather than one-shot generation
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-slate-800/50 rounded-lg p-6 border border-slate-700">
+          <h4 class="font-semibold text-cyan-300 mb-3">Quality Assurance & Iteration</h4>
+          <div class="space-y-4">
+            <div>
+              <p class="font-semibold text-white text-sm mb-2">Automated Validation Gates:</p>
+              <ul class="ml-4 space-y-1 text-slate-300 text-sm">
+                <li>• JSON schema validation (required keys, value types, range constraints)</li>
+                <li>• Spatial consistency checks (actions valid given current scene state)</li>
+                <li>• Error handling with automatic retry + error context injection</li>
+                <li>• Timeout limits with fallback to simpler prompts</li>
+              </ul>
+            </div>
+            <div>
+              <p class="font-semibold text-white text-sm mb-2">Systematic Testing:</p>
+              <ul class="ml-4 space-y-1 text-slate-300 text-sm">
+                <li>• 200+ test cases covering edge cases, ambiguous inputs, multi-object scenarios</li>
+                <li>• Regression testing on every prompt iteration</li>
+                <li>• Cross-model evaluation (GPT-4, Claude, Gemini) for consistency</li>
+                <li>• Performance benchmarking (latency, token efficiency, success rates)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-slate-800/50 rounded-lg p-6 border border-slate-700">
+          <h4 class="font-semibold text-cyan-300 mb-3">Technical Stack & Tools</h4>
+          <div class="flex flex-wrap gap-2">
+            <span class="text-xs px-3 py-1 bg-cyan-500/10 border border-cyan-500/30 rounded-full text-cyan-300">OpenAI API</span>
+            <span class="text-xs px-3 py-1 bg-cyan-500/10 border border-cyan-500/30 rounded-full text-cyan-300">Claude API</span>
+            <span class="text-xs px-3 py-1 bg-cyan-500/10 border border-cyan-500/30 rounded-full text-cyan-300">LangChain</span>
+            <span class="text-xs px-3 py-1 bg-cyan-500/10 border border-cyan-500/30 rounded-full text-cyan-300">Pydantic</span>
+            <span class="text-xs px-3 py-1 bg-cyan-500/10 border border-cyan-500/30 rounded-full text-cyan-300">JSON Schema</span>
+            <span class="text-xs px-3 py-1 bg-cyan-500/10 border border-cyan-500/30 rounded-full text-cyan-300">FastAPI</span>
+            <span class="text-xs px-3 py-1 bg-cyan-500/10 border border-cyan-500/30 rounded-full text-cyan-300">Python</span>
+          </div>
+        </div>
+
+        <div class="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-lg p-6 border border-cyan-500/30">
+          <h4 class="font-semibold text-cyan-300 mb-3">Key Achievement</h4>
+          <p class="text-slate-300 text-sm leading-relaxed">
+            Achieved <strong class="text-white">95%+ valid JSON output rate</strong> in production with <strong class="text-white">sub-200ms latency</strong>, enabling real-time interactive gaming experiences for 6K+ active sessions. This required 40+ prompt iterations, comprehensive test coverage, and systematic quality gates.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hallucination Reduction Expertise -->
+  <section class="py-12 px-6">
+    <div class="max-w-4xl mx-auto">
+      <h3 class="text-3xl font-bold mb-8">Hallucination Reduction & <span class="gradient-text">Quality Control</span></h3>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <!-- Technique 1 -->
+        <div class="bg-slate-800/50 rounded-lg p-6 border border-slate-700">
+          <h4 class="font-semibold text-white mb-3 text-lg">Retrieval-Augmented Generation (RAG)</h4>
+          <p class="text-slate-300 text-sm mb-4">Ground LLM responses in retrieved source documents rather than relying on parametric knowledge.</p>
+          <div class="text-xs text-slate-400 bg-slate-900/50 rounded p-3">
+            <strong class="text-cyan-400">Applied in:</strong> Built RAG pipelines over 80K+ documents with Neo4j vector indexing, ensuring AI-generated content traces back to verifiable sources
+          </div>
+        </div>
+
+        <!-- Technique 2 -->
+        <div class="bg-slate-800/50 rounded-lg p-6 border border-slate-700">
+          <h4 class="font-semibold text-white mb-3 text-lg">Few-Shot Learning with Quality Examples</h4>
+          <p class="text-slate-300 text-sm mb-4">Provide exemplars in prompts showing desired outputs and common failure modes.</p>
+          <div class="text-xs text-slate-400 bg-slate-900/50 rounded p-3">
+            <strong class="text-cyan-400">Applied in:</strong> Multimodal JSON pipeline includes 10+ curated examples per action type, dramatically reducing invalid outputs
+          </div>
+        </div>
+
+        <!-- Technique 3 -->
+        <div class="bg-slate-800/50 rounded-lg p-6 border border-slate-700">
+          <h4 class="font-semibold text-white mb-3 text-lg">Task Decomposition</h4>
+          <p class="text-slate-300 text-sm mb-4">Break complex generation into smaller, verifiable steps rather than one-shot prompts.</p>
+          <div class="text-xs text-slate-400 bg-slate-900/50 rounded p-3">
+            <strong class="text-cyan-400">Applied in:</strong> Decomposed spatial reasoning into: intent classification → entity extraction → action generation → spatial validation
+          </div>
+        </div>
+
+        <!-- Technique 4 -->
+        <div class="bg-slate-800/50 rounded-lg p-6 border border-slate-700">
+          <h4 class="font-semibold text-white mb-3 text-lg">Output Constraints & Schema Validation</h4>
+          <p class="text-slate-300 text-sm mb-4">Force structured outputs with explicit constraints and automated validation.</p>
+          <div class="text-xs text-slate-400 bg-slate-900/50 rounded p-3">
+            <strong class="text-cyan-400">Applied in:</strong> Pydantic models enforce required fields, value ranges, and type constraints with automatic retry on validation failure
+          </div>
+        </div>
+
+        <!-- Technique 5 -->
+        <div class="bg-slate-800/50 rounded-lg p-6 border border-slate-700">
+          <h4 class="font-semibold text-white mb-3 text-lg">Multi-Model Verification</h4>
+          <p class="text-slate-300 text-sm mb-4">Cross-verify factual claims using multiple models or knowledge bases.</p>
+          <div class="text-xs text-slate-400 bg-slate-900/50 rounded p-3">
+            <strong class="text-cyan-400">Applied in:</strong> Run critical generations through GPT-4 and Claude simultaneously—flag outputs with <80% agreement for review
+          </div>
+        </div>
+
+        <!-- Technique 6 -->
+        <div class="bg-slate-800/50 rounded-lg p-6 border border-slate-700">
+          <h4 class="font-semibold text-white mb-3 text-lg">Confidence-Based Routing</h4>
+          <p class="text-slate-300 text-sm mb-4">Route outputs based on confidence scores—auto-ship high confidence, review low confidence.</p>
+          <div class="text-xs text-slate-400 bg-slate-900/50 rounded p-3">
+            <strong class="text-cyan-400">Applied in:</strong> Built confidence scoring using model logprobs and semantic similarity—high confidence (>0.9) auto-accepted, low (<0.7) flagged
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Educational AI Analysis -->
+  <section class="py-12 px-6 bg-slate-900/40">
+    <div class="max-w-4xl mx-auto">
+      <h3 class="text-3xl font-bold mb-8">Case Study: <span class="gradient-text">Educational AI Quality Analysis</span></h3>
+      <p class="text-slate-300 text-sm mb-6 leading-relaxed">
+        As part of my research into educational AI systems, I conducted a deep analysis of Brainscape's AI Flashcard Copilot—an 8-prompt system for improving flashcard quality. This demonstrates my approach to evaluating prompt quality and identifying improvement opportunities.
+      </p>
+
+      <div class="space-y-6">
+        <div class="bg-slate-800/50 rounded-lg p-6 border border-slate-700">
+          <h4 class="font-semibold text-cyan-300 mb-3">Identified Gaps in Current Implementation</h4>
+          <ul class="space-y-3 text-slate-300 text-sm">
+            <li class="flex gap-3">
+              <span class="text-red-400 flex-shrink-0">✗</span>
+              <div>
+                <strong class="text-white">Missing Output Constraints:</strong> Documentation reveals "ChatGPT will not adhere to the number of flashcards requested" and "does strange things converting to new languages" → suggests missing validation and schema enforcement
+              </div>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-red-400 flex-shrink-0">✗</span>
+              <div>
+                <strong class="text-white">Hallucination Risk:</strong> "Answer this card" prompt generates answers even with empty answer fields → lacks grounding in source material or deck context
+              </div>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-red-400 flex-shrink-0">✗</span>
+              <div>
+                <strong class="text-white">Card-Level vs. Deck-Level Understanding:</strong> AI operates on individual cards without understanding knowledge graph relationships across the entire deck
+              </div>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-red-400 flex-shrink-0">✗</span>
+              <div>
+                <strong class="text-white">Generic Model Usage:</strong> Uses general-purpose ChatGPT rather than education-specialized or fine-tuned models
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-slate-800/50 rounded-lg p-6 border border-slate-700">
+          <h4 class="font-semibold text-cyan-300 mb-3">Proposed Improvements (My Approach)</h4>
+          <ul class="space-y-3 text-slate-300 text-sm">
+            <li class="flex gap-3">
+              <span class="text-green-400 flex-shrink-0">✓</span>
+              <div>
+                <strong class="text-white">Deck-Level Knowledge Graphs:</strong> Build graphs capturing concept relationships across cards to ensure consistency, detect gaps, and suggest optimal card sequences
+              </div>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-green-400 flex-shrink-0">✓</span>
+              <div>
+                <strong class="text-white">Validation Layers:</strong> Implement automated checks (answer leakage detection, hint relevance scoring, mnemonic-to-answer mapping validation) before showing outputs to users
+              </div>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-green-400 flex-shrink-0">✓</span>
+              <div>
+                <strong class="text-white">Confidence Scoring:</strong> Add confidence metrics to enable auto-accept for high-quality outputs and human review for uncertain generations
+              </div>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-green-400 flex-shrink-0">✓</span>
+              <div>
+                <strong class="text-white">Evaluation Framework:</strong> Build test suites for each prompt verifying outputs match pedagogical best practices (e.g., "Simplify" actually reduces word count, "Refine card" preserves semantic meaning)
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Competencies -->
+  <section class="py-12 px-6">
+    <div class="max-w-4xl mx-auto">
+      <h3 class="text-3xl font-bold mb-8 text-center">Core <span class="gradient-text">Prompt Engineering</span> Competencies</h3>
+      
+      <div class="space-y-4">
+        <div class="bg-slate-800/30 rounded-lg p-5 border border-slate-700">
+          <div class="flex justify-between items-start mb-2">
+            <h4 class="font-semibold text-white">Context-Aware Prompt Design</h4>
+            <span class="text-xs text-cyan-400 font-bold">EXPERT</span>
+          </div>
+          <p class="text-slate-300 text-sm">Dynamically generating prompts that incorporate user context, knowledge graphs, and historical patterns for personalized outputs</p>
+        </div>
+
+        <div class="bg-slate-800/30 rounded-lg p-5 border border-slate-700">
+          <div class="flex justify-between items-start mb-2">
+            <h4 class="font-semibold text-white">Structured Output Engineering</h4>
+            <span class="text-xs text-cyan-400 font-bold">EXPERT</span>
+          </div>
+          <p class="text-slate-300 text-sm">Constraining LLM outputs to valid JSON schemas with validation, retry logic, and deterministic behavior patterns</p>
+        </div>
+
+        <div class="bg-slate-800/30 rounded-lg p-5 border border-slate-700">
+          <div class="flex justify-between items-start mb-2">
+            <h4 class="font-semibold text-white">Multimodal Prompt Integration</h4>
+            <span class="text-xs text-cyan-400 font-bold">EXPERT</span>
+          </div>
+          <p class="text-slate-300 text-sm">Engineering prompts that process text, images, and spatial context simultaneously for coherent multimodal reasoning</p>
+        </div>
+
+        <div class="bg-slate-800/30 rounded-lg p-5 border border-slate-700">
+          <div class="flex justify-between items-start mb-2">
+            <h4 class="font-semibold text-white">Quality Evaluation & Testing</h4>
+            <span class="text-xs text-cyan-400 font-bold">EXPERT</span>
+          </div>
+          <p class="text-slate-300 text-sm">Building comprehensive test suites, automated validation gates, and systematic iteration workflows for production reliability</p>
+        </div>
+
+        <div class="bg-slate-800/30 rounded-lg p-5 border border-slate-700">
+          <div class="flex justify-between items-start mb-2">
+            <h4 class="font-semibold text-white">Hallucination Prevention</h4>
+            <span class="text-xs text-cyan-400 font-bold">EXPERT</span>
+          </div>
+          <p class="text-slate-300 text-sm">Implementing RAG pipelines, multi-model consensus, and factual grounding techniques to ensure output reliability</p>
+        </div>
+
+        <div class="bg-slate-800/30 rounded-lg p-5 border border-slate-700">
+          <div class="flex justify-between items-start mb-2">
+            <h4 class="font-semibold text-white">Production-Grade Deployment</h4>
+            <span class="text-xs text-cyan-400 font-bold">EXPERT</span>
+          </div>
+          <p class="text-slate-300 text-sm">Version-controlled prompts, A/B testing, gradual rollouts, monitoring dashboards, and regression testing frameworks</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Methodology -->
+  <section class="py-12 px-6 bg-slate-900/40">
+    <div class="max-w-4xl mx-auto">
+      <h3 class="text-3xl font-bold mb-8">My Prompt Engineering <span class="gradient-text">Methodology</span></h3>
+      
+      <div class="space-y-6">
+        <!-- Phase 1 -->
+        <div class="border-l-4 border-cyan-400 pl-6">
+          <h4 class="font-bold text-white mb-2">1. Discovery & Requirements</h4>
+          <p class="text-slate-300 text-sm mb-3">Define success criteria, edge cases, and quality metrics before writing a single prompt</p>
+          <div class="text-xs text-slate-400 space-y-1">
+            <p>• What constitutes "good" output? (quantifiable metrics)</p>
+            <p>• What are unacceptable failures? (hallucinations, invalid formats, toxicity)</p>
+            <p>• What context is available? (user data, source documents, system state)</p>
+          </div>
+        </div>
+
+        <!-- Phase 2 -->
+        <div class="border-l-4 border-cyan-400 pl-6">
+          <h4 class="font-bold text-white mb-2">2. Prompt Architecture Design</h4>
+          <p class="text-slate-300 text-sm mb-3">Structure prompts with clear instructions, constraints, examples, and output formats</p>
+          <div class="text-xs text-slate-400 space-y-1">
+            <p>• Role & context setting</p>
+            <p>• Explicit constraints and boundaries</p>
+            <p>• Few-shot examples (positive & negative)</p>
+            <p>• Output schema with validation rules</p>
+          </div>
+        </div>
+
+        <!-- Phase 3 -->
+        <div class="border-l-4 border-cyan-400 pl-6">
+          <h4 class="font-bold text-white mb-2">3. Systematic Testing & Iteration</h4>
+          <p class="text-slate-300 text-sm mb-3">Build comprehensive test suites and iterate based on failure analysis</p>
+          <div class="text-xs text-slate-400 space-y-1">
+            <p>• Create 100+ test cases covering happy paths and edge cases</p>
+            <p>• Version control prompts (treat like code)</p>
+            <p>• Change one variable at a time, measure impact</p>
+            <p>• Document why each change was made</p>
+          </div>
+        </div>
+
+        <!-- Phase 4 -->
+        <div class="border-l-4 border-cyan-400 pl-6">
+          <h4 class="font-bold text-white mb-2">4. Production Validation</h4>
+          <p class="text-slate-300 text-sm mb-3">Deploy with automated quality gates and continuous monitoring</p>
+          <div class="text-xs text-slate-400 space-y-1">
+            <p>• Automated validation layers (schema, content, safety)</p>
+            <p>• Confidence-based routing (auto-ship vs. human review)</p>
+            <p>• Real-time monitoring dashboards</p>
+            <p>• Weekly manual spot checks of random samples</p>
+          </div>
+        </div>
+
+        <!-- Phase 5 -->
+        <div class="border-l-4 border-cyan-400 pl-6">
+          <h4 class="font-bold text-white mb-2">5. Continuous Improvement</h4>
+          <p class="text-slate-300 text-sm mb-3">Use production feedback to identify systematic issues and improve prompts</p>
+          <div class="text-xs text-slate-400 space-y-1">
+            <p>• Track acceptance rates, edit patterns, regeneration frequency</p>
+            <p>• Failed outputs become regression test cases</p>
+            <p>• A/B test prompt improvements before full rollout</p>
+            <p>• Maintain prompt performance benchmarks over time</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tools & Experience -->
+  <section class="py-12 px-6">
+    <div class="max-w-4xl mx-auto">
+      <h3 class="text-3xl font-bold mb-8 text-center">Tools & <span class="gradient-text">Platforms</span></h3>
+      
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-slate-800/50 rounded-lg p-6 border border-slate-700">
+          <h4 class="font-semibold text-white mb-4">LLM APIs</h4>
+          <div class="space-y-2 text-sm text-slate-300">
+            <p>✓ OpenAI API (GPT-4, GPT-4o)</p>
+            <p>✓ Anthropic Claude API</p>
+            <p>✓ Google Gemini</p>
+            <p>✓ Model fine-tuning (ElevenLabs)</p>
+          </div>
+        </div>
+
+        <div class="bg-slate-800/50 rounded-lg p-6 border border-slate-700">
+          <h4 class="font-semibold text-white mb-4">Frameworks</h4>
+          <div class="space-y-2 text-sm text-slate-300">
+            <p>✓ LangChain (orchestration)</p>
+            <p>✓ Pydantic (schema validation)</p>
+            <p>✓ FastAPI (deployment)</p>
+            <p>✓ Ray (distributed systems)</p>
+          </div>
+        </div>
+
+        <div class="bg-slate-800/50 rounded-lg p-6 border border-slate-700">
+          <h4 class="font-semibold text-white mb-4">Specialized Tools</h4>
+          <div class="space-y-2 text-sm text-slate-300">
+            <p>✓ Cursor AI (daily use)</p>
+            <p>✓ Neo4j (knowledge graphs)</p>
+            <p>✓ Vector databases</p>
+            <p>✓ n8n (workflow automation)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quantifiable Results -->
+  <section class="py-12 px-6">
+    <div class="max-w-4xl mx-auto">
+      <h3 class="text-3xl font-bold mb-8 text-center">Quantifiable <span class="gradient-text">Results</span></h3>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-gradient-to-br from-cyan-500/10 to-blue-500/10 rounded-lg p-6 border border-cyan-500/30">
+          <p class="text-4xl font-bold text-cyan-400 mb-2">95%+</p>
+          <p class="text-white font-semibold mb-1">Valid JSON Output Rate</p>
+          <p class="text-slate-400 text-xs">Deterministic multimodal pipeline in production</p>
+        </div>
+
+        <div class="bg-gradient-to-br from-cyan-500/10 to-blue-500/10 rounded-lg p-6 border border-cyan-500/30">
+          <p class="text-4xl font-bold text-cyan-400 mb-2">&lt;200ms</p>
+          <p class="text-white font-semibold mb-1">Generation Latency</p>
+          <p class="text-slate-400 text-xs">Real-time structured output generation at scale</p>
+        </div>
+
+        <div class="bg-gradient-to-br from-cyan-500/10 to-blue-500/10 rounded-lg p-6 border border-cyan-500/30">
+          <p class="text-4xl font-bold text-cyan-400 mb-2">6K+</p>
+          <p class="text-white font-semibold mb-1">Active Sessions Supported</p>
+          <p class="text-slate-400 text-xs">Production multimodal AI gaming pipeline</p>
+        </div>
+
+        <div class="bg-gradient-to-br from-cyan-500/10 to-blue-500/10 rounded-lg p-6 border border-cyan-500/30">
+          <p class="text-4xl font-bold text-cyan-400 mb-2">80K+</p>
+          <p class="text-white font-semibold mb-1">Documents in RAG Pipeline</p>
+          <p class="text-slate-400 text-xs">Graph-based retrieval with context grounding</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Key Learnings -->
+  <section class="py-12 px-6 bg-slate-900/40">
+    <div class="max-w-4xl mx-auto">
+      <h3 class="text-3xl font-bold mb-8 text-center">Key <span class="gradient-text">Learnings</span></h3>
+      
+      <div class="space-y-4">
+        <div class="bg-slate-800/50 rounded-lg p-6 border border-slate-700">
+          <h4 class="font-semibold text-cyan-300 mb-2">1. Structured Outputs Require Structured Prompts</h4>
+          <p class="text-slate-300 text-sm">Moving from free-form responses to constrained JSON outputs requires explicit schemas, clear validation rules, and comprehensive examples covering edge cases.</p>
+        </div>
+
+        <div class="bg-slate-800/50 rounded-lg p-6 border border-slate-700">
+          <h4 class="font-semibold text-cyan-300 mb-2">2. Context Engineering Beats Prompt Tweaking</h4>
+          <p class="text-slate-300 text-sm">The most powerful prompts aren't static—they dynamically incorporate user context, domain knowledge, and system state. Investing in context infrastructure yields better results than endlessly tweaking prompt wording.</p>
+        </div>
+
+        <div class="bg-slate-800/50 rounded-lg p-6 border border-slate-700">
+          <h4 class="font-semibold text-cyan-300 mb-2">3. Automated Testing Is Non-Negotiable</h4>
+          <p class="text-slate-300 text-sm">You can't rely on user feedback as your primary quality signal. Build test suites, regression tests, and automated validation gates that catch issues before users see them.</p>
+        </div>
+
+        <div class="bg-slate-800/50 rounded-lg p-6 border border-slate-700">
+          <h4 class="font-semibold text-cyan-300 mb-2">4. Decomposition Improves Reliability</h4>
+          <p class="text-slate-300 text-sm">Breaking complex tasks into smaller, verifiable steps produces more reliable outputs than one-shot generation. Each step can be validated independently.</p>
+        </div>
+
+        <div class="bg-slate-800/50 rounded-lg p-6 border border-slate-700">
+          <h4 class="font-semibold text-cyan-300 mb-2">5. Production Prompts Are Code</h4>
+          <p class="text-slate-300 text-sm">Treat prompts like production code: version control, documentation, testing, code review, and careful deployment. Track performance metrics and maintain benchmarks over time.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 px-6">
+    <div class="max-w-3xl mx-auto text-center">
+      <h3 class="text-3xl font-bold mb-4">Interested in discussing <span class="gradient-text">prompt engineering</span>?</h3>
+      <p class="text-slate-400 mb-8">I'm happy to share more about my work on RAG pipelines, structured output generation, or educational AI quality systems.</p>
+      <a href="mailto:ojasmithareddy17@gmail.com" class="inline-flex items-center gap-2 px-8 py-4 rounded-lg font-semibold text-sm" style="background: linear-gradient(90deg,#3b82f6,#06b6d4)">
+        Get In Touch
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-800 py-8 text-center text-slate-500 text-sm px-6">
+    <div class="max-w-4xl mx-auto">
+      <p class="mb-4">© 2026 Ojasmitha Pedirappagari · AI Engineer · New York, NY</p>
+      <div class="flex justify-center gap-6 text-xs">
+        <a href="mailto:ojasmithareddy17@gmail.com" class="hover:text-cyan-400 transition">Email</a>
+        <a href="https://linkedin.com/in/Ojasmitha" target="_blank" rel="noopener noreferrer" class="hover:text-cyan-400 transition">LinkedIn</a>
+        <a href="https://github.com/ojasmitha" target="_blank" rel="noopener noreferrer" class="hover:text-cyan-400 transition">GitHub</a>
+        <a href="/" class="hover:text-cyan-400 transition">Main Portfolio</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
